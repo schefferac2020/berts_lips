@@ -4,3 +4,5 @@ sign_sample_model
 gpulab.key
 gpulab.key.pub
 *.pyc
+data/*
+*.DS_Store*
