@@ -37,7 +37,7 @@ def greedy(
     :return:
     """
 
-    if isinstance(decoder, TransformerDecoder) or isinstance(decoder, mBARTDecoder) or isinstance(decoder, BERTDecoder):
+    if isinstance(decoder, TransformerDecoder) or isinstance(decoder, BERTDecoder): #mBARTDecoder
         # Transformer greedy decoding
         greedy_fun = transformer_greedy
     else:
@@ -234,8 +234,7 @@ def beam_search(
     assert n_best <= size, "Can only return {} best hypotheses.".format(size)
 
     # init
-    transformer = isinstance(decoder, TransformerDecoder) or isinstance(decoder, mBARTDecoder) or isinstance(decoder,
-                                                                                                             BERTDecoder)
+    transformer = isinstance(decoder, TransformerDecoder) or isinstance(decoder, BERTDecoder) # or isinstance(decoder, mBARTDecoder)
     batch_size = src_mask.size(0)
     att_vectors = None  # not used for Transformer
 
