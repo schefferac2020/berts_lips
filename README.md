@@ -14,6 +14,8 @@ This code is based on the implementation of [Sign Language Transformers: Sign La
 
     `pip install -r requirements.txt`
 
+**EECS 542 NOTE:** Use python 3.7 I think
+
 ## Usage
 
 Choose the configuration file that you want to reproduce and update the `data.data_path` and `training.model_dir` configuration entries
@@ -21,35 +23,10 @@ to the path where your data resides (default: `data/PHOENIX2014T`) and the path 
 
   `python -m signjoey train configs/$CONFIG.yaml` 
 
+
+  **EECS 542 NOTE:** do the following instead:
+
+  `python3 -m signjoey train configs/sign2text/s2021/phoenix14t_bert2bert_drew.yaml`
+
+
 For the mBART-50 model, you will first need to tokenize the corpus using the mBART-50 tokenizer. You can use the `tokenization/tokenize_mbart50.py` script for this.
-
-## Citation
-
-If you use this code in one of your projects, please cite
-
-```
-@InProceedings{De_Coster_2021_AT4SSL,
-    author    = {De Coster, Mathieu and D'Oosterlinck, Karel and Pizurica, Marija and Rabaey, Paloma and Verlinden, Severine and Van Herreweghe, Mieke and Dambre, Joni},
-    title     = {Frozen Pretrained Transformers for Neural Sign Language Translation},
-    booktitle = {1st International Workshop on Automated Translation for Signed and Spoken Languages},
-    month     = {August},
-    year      = {2021},
-}
-```
-
-and/or
-
-```
-@article{info13050220,
-	Article-Number = {220},
-	Author = {De Coster, Mathieu and Dambre, Joni},
-	Doi = {10.3390/info13050220},
-	Issn = {2078-2489},
-	Journal = {Information},
-	Number = {5},
-	Title = {Leveraging Frozen Pretrained Written Language Models for Neural Sign Language Translation},
-	Url = {https://www.mdpi.com/2078-2489/13/5/220},
-	Volume = {13},
-	Year = {2022}
-}
-```
