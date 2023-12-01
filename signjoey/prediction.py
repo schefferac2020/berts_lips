@@ -187,6 +187,9 @@ def validate_on_data(
 
         if do_recognition:
             assert len(all_gls_outputs) == len(data)
+            print("Recognition Loss Function ", recognition_loss_function)
+            print("Recognition Loss Weight ", recognition_loss_weight)
+            print("Total Num Gls ", total_num_gls_tokens)
             if (
                 recognition_loss_function is not None
                 and recognition_loss_weight != 0

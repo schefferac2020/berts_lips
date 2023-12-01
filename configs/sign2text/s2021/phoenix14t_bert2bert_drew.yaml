@@ -5,10 +5,10 @@ data:
     sgn: sign
     txt: text
     gls: gloss
-    train: phoenix14t.pami0.train
-    dev: phoenix14t.pami0.dev
-    test: phoenix14t.pami0.test
-    feature_size: 1024
+    train: lip_embeddings.pkl.gz
+    dev: lip_embeddings.pkl.gz
+    test: lip_embeddings.pkl.gz
+    feature_size: 512
     level: word
     txt_lowercase: true
     max_sent_length: 400
